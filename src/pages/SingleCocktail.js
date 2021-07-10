@@ -1,7 +1,6 @@
 import React from "react";
 import Loading from "../components/Loading";
 import { useParams, Link } from "react-router-dom";
-import Cocktail from "../components/Cocktail";
 const url = "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=";
 
 const SingleCocktail = () => {
@@ -92,6 +91,10 @@ const SingleCocktail = () => {
           <p>
             <span className="drink-data">instructions: </span>
             {instructions}
+          </p>
+          <p>
+            <span className="drink-data">type: </span>
+            {info}
           </p>
           <p>
             <span className="drink-data">ingredients: </span>
