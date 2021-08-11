@@ -5,21 +5,20 @@ import { useGlobalContext } from "../context/context";
 
 const CocktailList = () => {
   const { cocktails, loading } = useGlobalContext();
-  console.log(cocktails);
 
   if (loading) {
     return <Loading />;
   }
   if (cocktails.length < 1) {
     return (
-      <h2 className="section-title">
-        No Cocktails found for the searched item :(
-      </h2>
+      <h3 className="section-title">
+        No Cocktails found for the searched item.
+      </h3>
     );
   }
   return (
     <section className="section">
-      <h2 className="section-title">cocktails</h2>
+      {/* <h2 className="section-title">cocktails</h2> */}
       <div className="cocktails-center">
         {cocktails.map((item) => {
           return <Cocktail key={item.id} {...item} />;

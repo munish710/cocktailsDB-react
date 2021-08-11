@@ -8,6 +8,7 @@ const SearchForm = () => {
   React.useEffect(() => {
     searchvalue.current.focus();
   }, []);
+
   const searchCocktail = () => {
     setSearchTerm(searchvalue.current.value);
   };
@@ -19,7 +20,9 @@ const SearchForm = () => {
     <section className="section search">
       <form className="search-form" onSubmit={handleSubmit}>
         <div className="form-control">
-          <label htmlFor="name">Search for your favorite cocktail</label>
+          <label htmlFor="name">
+            <h4>Search for your favorite cocktail</h4>
+          </label>
           <input
             type="text"
             id="name"
