@@ -9,7 +9,8 @@ const Cocktail = ({ image, name, id, info, glass }) => {
       </div>
       <div className="cocktail-footer">
         <h3>{name}</h3>
-        <h4>{glass}</h4>
+        {/* <h4>{glass}</h4> */}
+        <h4>For : {info.toLowerCase() === "alcoholic" ? "21+" : "16+"}</h4>
         <p>{info}</p>
         <Link to={`/cocktail/${id}`} className="btn btn-primary btn-details">
           Details

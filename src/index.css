@@ -22,7 +22,7 @@ Variables
   --mainBorderRadius: 0.25rem;
   --smallWidth: 85vw;
   --maxWidth: 40rem;
-  --fullWidth: 1170px;
+  --fullWidth: 1100px;
 }
 
 /* 
@@ -56,7 +56,7 @@ h1,
 h2,
 h3,
 h4 {
-  letter-spacing: var(--spacing);
+  /* letter-spacing: var(--spacing); */
   text-transform: capitalize;
   line-height: 1.25;
   margin-bottom: 0.75rem;
@@ -68,7 +68,7 @@ h2 {
   font-size: 2rem;
 }
 h3 {
-  font-size: 1.25rem;
+  font-size: 1rem;
 }
 h4 {
   font-size: 0.875rem;
@@ -85,7 +85,7 @@ p {
     font-size: 2.5rem;
   }
   h3 {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
   }
   h4 {
     font-size: 1rem;
@@ -185,6 +185,25 @@ Buttons
 .btn-details:hover {
   background: var(--primaryLightColor);
   border-color: var(--primaryLightColor);
+}
+
+.btn-chip {
+  color: var(--primaryColor);
+  border: 2px solid var(--primaryColor);
+  padding: 0.25rem 0.7rem;
+  display: inline-block;
+  transition: var(--mainTransition);
+  cursor: pointer;
+  font-size: 1rem;
+  background: transparent;
+  border-radius: 0.75rem;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+}
+
+.btn-chip:hover {
+  background: var(--primaryColor);
+  color: var(--mainWhite);
 }
 /* 
 ====== 
@@ -330,7 +349,7 @@ Cocktails List
 }
 @media screen and (min-width: 576px) {
   .cocktails-center {
-    grid-template-columns: repeat(auto-fill, minmax(338.8px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(275px, 1fr));
   }
 }
 /* 
@@ -352,7 +371,7 @@ Cocktail
   box-shadow: var(--darkShadow);
 }
 .cocktail img {
-  height: 17rem;
+  height: 16rem;
   object-fit: cover;
   border-top-left-radius: var(--mainBorderRadius);
   border-top-right-radius: var(--mainBorderRadius);
@@ -384,7 +403,7 @@ Form
 .search-form {
   width: var(--smallWidth);
   margin: 0 auto;
-  max-width: var(--maxWidth);
+  max-width: var(--fullWidth);
   background: var(--mainWhite);
   padding: 2rem 2.5rem;
   text-transform: capitalize;
@@ -395,8 +414,7 @@ Form
 .form-control label {
   display: block;
   margin-bottom: 1.25rem;
-  font-weight: bold;
-  letter-spacing: 0.25rem;
+  /* letter-spacing: 0.25rem; */
   color: var(--primaryColor);
 }
 .form-control input {
@@ -409,6 +427,25 @@ Form
   padding: 0.5rem;
   font-size: 1.2rem;
 }
+
+.categories {
+  margin-top: 2rem;
+  color: var(--primaryColor);
+}
+
+@media screen and (min-width: 576px) {
+  .categories-container {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .btn-chip {
+    padding: 0.45rem 0.8rem;
+  }
+}
+
 /* 
 ====== 
 Cocktail
