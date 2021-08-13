@@ -2,7 +2,8 @@ import React from "react";
 import { useGlobalContext } from "../context/context";
 
 const SearchForm = () => {
-  const { setSearchTerm } = useGlobalContext();
+  const { setSearchTerm, fetchFilterDrinks, fetchRandomDrink } =
+    useGlobalContext();
   const searchvalue = React.useRef("");
 
   React.useEffect(() => {
@@ -35,10 +36,22 @@ const SearchForm = () => {
           <h3>Select your type</h3>
           <div className="categories-container">
             <div className="types-container">
-              <button className="btn-chip">Alcoholic</button>
-              <button className="btn-chip">Non-Alcoholic</button>
+              <button
+                className="btn-chip"
+                onClick={() => fetchFilterDrinks("Alcoholic")}
+              >
+                Alcoholic
+              </button>
+              <button
+                className="btn-chip"
+                onClick={() => fetchFilterDrinks("Non_Alcoholic")}
+              >
+                Non-Alcoholic
+              </button>
             </div>
-            <button className="btn-chip">Feeling Adventurous?</button>
+            <button className="btn-chip" onClick={fetchRandomDrink}>
+              Feeling Adventurous?
+            </button>
           </div>
         </div>
       </form>

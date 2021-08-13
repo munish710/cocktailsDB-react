@@ -365,7 +365,7 @@ Cocktail
   /* border: 2px solid var(--darkGrey); */
   box-shadow: var(--lightShadow);
   transition: var(--mainTransition);
-  padding: 1rem;
+  padding: 0.75em;
   display: grid;
   grid-template-rows: auto 1fr;
   border-radius: var(--mainBorderRadius);
