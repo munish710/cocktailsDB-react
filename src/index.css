@@ -18,8 +18,8 @@ Variables
   --mainTransition: all 0.3s linear;
   --mainSpacing: 0.3rem;
   --lightShadow: 2px 3px 3px 0px rgba(0, 0, 0, 0.5);
-  --darkShadow: 4px 5px 5px 0px rgba(0, 0, 0, 0.5);
-  --mainBorderRadius: 0.25rem;
+  --darkShadow: 3px 4px 4px 0px rgba(0, 0, 0, 0.5);
+  --mainBorderRadius: 0.45rem;
   --smallWidth: 85vw;
   --maxWidth: 40rem;
   --fullWidth: 1100px;
@@ -116,6 +116,7 @@ img {
 .section {
   width: 90vw;
   margin: 0 auto;
+  padding: 3rem 0;
   max-width: var(--max-width);
 }
 
@@ -328,8 +329,8 @@ Cocktails List
 ======
 */
 
-.section {
-  padding: 3rem 0;
+.cocktails-section {
+  padding-top: 0;
 }
 .section-title {
   font-size: 1.5rem;
@@ -359,10 +360,12 @@ Cocktail
 */
 
 .cocktail {
-  background: var(--mainWhite);
+  background: var(--mainGrey);
   margin-bottom: 2rem;
+  /* border: 2px solid var(--darkGrey); */
   box-shadow: var(--lightShadow);
   transition: var(--mainTransition);
+  padding: 1rem;
   display: grid;
   grid-template-rows: auto 1fr;
   border-radius: var(--mainBorderRadius);
@@ -373,11 +376,13 @@ Cocktail
 .cocktail img {
   height: 16rem;
   object-fit: cover;
-  border-top-left-radius: var(--mainBorderRadius);
-  border-top-right-radius: var(--mainBorderRadius);
+  /* border-top-left-radius: var(--mainBorderRadius);
+  border-top-right-radius: var(--mainBorderRadius); */
+  border-radius: var(--mainBorderRadius);
 }
 .cocktail-footer {
-  padding: 1.5rem;
+  /* padding: 1.5rem; */
+  padding-top: 1rem;
 }
 .cocktail-footer h3,
 .cocktail-footer h4,
