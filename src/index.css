@@ -65,7 +65,7 @@ h1 {
   font-size: 2.5rem;
 }
 h2 {
-  font-size: 2rem;
+  font-size: 1.75rem;
 }
 h3 {
   font-size: 1rem;
@@ -82,7 +82,7 @@ p {
     font-size: 3rem;
   }
   h2 {
-    font-size: 2.5rem;
+    font-size: 2.25rem;
   }
   h3 {
     font-size: 1.5rem;
@@ -457,9 +457,17 @@ Cocktail
 ======
 */
 
-.cocktail-section {
-  text-align: center;
+.cocktail-section-center {
+  margin: auto;
+  max-width: var(--fullWidth);
 }
+.cocktail-section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
 .drink {
   width: var(--smallWidth);
   max-width: var(--fullWidth);
@@ -469,19 +477,34 @@ Cocktail
 .drink img {
   border-radius: var(--mainBorderRadius);
 }
-.drink p {
-  font-weight: bold;
-  text-transform: capitalize;
-  line-height: 1.8;
+
+.drink-data-item {
+  font-weight: 600;
+  font-size: 1.12rem;
+  /* line-height: 1.5; */
+  margin-bottom: 1rem;
 }
+
+.drink-data-item p {
+  margin-top: 0.25rem;
+  margin-left: 0.45rem;
+  display: block;
+  width: 100%;
+}
+
 .drink span {
   margin-right: 0.5rem;
 }
+
 .drink-data {
+  width: 10rem;
+}
+.drink-data-title {
   background: var(--primaryLightColor);
-  padding: 0.25rem 0.5rem;
+  padding: 0.125rem 0.45rem;
   border-radius: var(--mainBorderRadius);
   color: var(--primaryColor);
+  font-size: 1.12rem;
 }
 .drink-info {
   padding-top: 2rem;
@@ -495,6 +518,11 @@ Cocktail
   }
   .drink-info {
     padding-top: 0;
+  }
+
+  .drink-data-item {
+    display: flex;
+    align-items: baseline;
   }
 }
 
