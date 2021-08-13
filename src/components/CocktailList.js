@@ -11,7 +11,7 @@ const CocktailList = () => {
   }
   if (cocktails.length < 1) {
     return (
-      <h3 className="section-title">
+      <h3 className="section-title page">
         No Cocktails found for the searched item
       </h3>
     );
