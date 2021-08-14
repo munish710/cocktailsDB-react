@@ -10,7 +10,7 @@ const AppContext = React.createContext();
 
 const AppProvider = ({ children }) => {
   const [loading, setLoading] = useState(true);
-  const [searchTerm, setSearchTerm] = useState("a");
+  const [searchTerm, setSearchTerm] = useState("m");
   const [cocktails, setCocktails] = useState([]);
 
   const history = useHistory();

@@ -128,6 +128,10 @@ img {
   .section {
     width: 95vw;
   }
+
+  .about {
+    padding-bottom: 0;
+  }
 }
 
 /* 
